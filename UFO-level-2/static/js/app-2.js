@@ -36,22 +36,12 @@ function runEnter() {
 
   // Prevent the page from refreshing
   d3.event.preventDefault();
-  
-  // Select the input elements and get the raw HTML nodes
-  var inputElement = d3.select("#datetime");
-  var inputDate = inputElement.property("value");
-  
-  inputElement = d3.select("#citycode");
-  var inputCity = inputElement.property("value").toLowerCase();
-  
-  inputElement = d3.select("#statecode");
-  var inputState = inputElement.property("value").toLowerCase();
-  
-  inputElement = d3.select("#countrycode");
-  var inputCountry = inputElement.property("value").toLowerCase();
-  
-  inputElement = d3.select("#shape");
-  var inputShape = inputElement.property("value").toLowerCase();
+
+  var inputDate   = d3.select("#datetime").property("value");
+  var inputCity   = d3.select("#citycode").property("value").toLowerCase();
+  var inputState  = d3.select("#statecode").property("value").toLowerCase();
+  var inputCountry = d3.select("#countrycode").property("value").toLowerCase();
+  var inputShape  = d3.select("#shape").property("value").toLowerCase();
 
   // Check and filter inputdata
   var filteredData = tableData;   // If no input entered, all UFO sightings will display  
@@ -75,11 +65,11 @@ function runEnter() {
       filteredData = filteredData.filter(ufoObject => ufoObject.shape === inputShape);
       } 
         
-  console.log('input date is : ' + inputDate);  
-  console.log('input city is : ' + inputCity);       
-  console.log('input state is : ' + inputState);  
-  console.log('input country is : ' + inputCountry);         
-  console.log('input shape is : ' + inputShape);  
+  console.log('input date: ' + inputDate);  
+  console.log('input city: ' + inputCity);       
+  console.log('input state: ' + inputState);  
+  console.log('input country: ' + inputCountry);         
+  console.log('input shape: ' + inputShape);  
   console.log(filteredData);  
 
   // Clear tbody display before populating  
