@@ -43,17 +43,14 @@ function runEnter() {
   // Get the value property of the input element
   var inputValue = inputElement.property("value");
   
-  // var filteredData = tableData.filter(ufoObject => ufoObject.datetime === inputValue);
+  var filteredData = tableData;
 
   // If no input value, display all 
-  if (inputValue === "") {
-    var filteredData = tableData;
-  }
-  else {
-    var filteredData = tableData.filter(ufoObject => ufoObject.datetime === inputValue);
+  if (inputValue != "") {
+     filteredData = tableData.filter(ufoObject => ufoObject.datetime === inputValue);
   }
   
-  console.log(inputValue);
+  console.log('input date: ' + inputValue);
   console.log(filteredData);  
 
   // Clear tbody display before populating  
