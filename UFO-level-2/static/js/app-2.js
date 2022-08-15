@@ -42,6 +42,12 @@ function runEnter() {
   var inputState  = d3.select("#statecode").property("value").toLowerCase();
   var inputCountry = d3.select("#countrycode").property("value").toLowerCase();
   var inputShape  = d3.select("#shape").property("value").toLowerCase();
+        
+  console.log('input date: ' + inputDate);  
+  console.log('input city: ' + inputCity);       
+  console.log('input state: ' + inputState);  
+  console.log('input country: ' + inputCountry);         
+  console.log('input shape: ' + inputShape);  
 
   // Check and filter inputdata
   var filteredData = tableData;   // If no input entered, all UFO sightings will display  
@@ -50,26 +56,21 @@ function runEnter() {
       }
 
   if (inputCity != "") {
-      filteredData = filteredData.filter(ufoObject => ufoObject.city === inputCity);
+      filteredData = filteredData.filter(ufoObject => ufoObject.city.toLowerCase().includes(inputCity));
       } 
-  
+
   if (inputState != "") {
-      filteredData = filteredData.filter(ufoObject => ufoObject.state === inputState);
-      } 
-  
+      filteredData = filteredData.filter(ufoObject => ufoObject.state.toLowerCase().includes(inputState));
+      }
+
   if (inputCountry != "") {
-      filteredData = filteredData.filter(ufoObject => ufoObject.country === inputCountry);
+      filteredData = filteredData.filter(ufoObject => ufoObject.country.toLowerCase().includes(inputCountry));
       } 
 
   if (inputShape != "") {
-      filteredData = filteredData.filter(ufoObject => ufoObject.shape === inputShape);
+      filteredData = filteredData.filter(ufoObject => ufoObject.shape.toLowerCase().includes(inputShape));
       } 
-        
-  console.log('input date: ' + inputDate);  
-  console.log('input city: ' + inputCity);       
-  console.log('input state: ' + inputState);  
-  console.log('input country: ' + inputCountry);         
-  console.log('input shape: ' + inputShape);  
+  
   console.log(filteredData);  
 
   // Clear tbody display before populating  
