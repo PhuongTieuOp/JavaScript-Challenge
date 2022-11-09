@@ -21,7 +21,7 @@ Our goal is to show an on-line report which allow user full or partial search on
 
 ### Dataset
 
-* [UFO Sightings Data](StarterCode/static/js/data.js)
+* [UFO Sightings Data](/static/js/data.js)
 
 ### Tools:
 
