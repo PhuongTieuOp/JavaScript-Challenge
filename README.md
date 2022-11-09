@@ -9,7 +9,7 @@ The extra-terrestrial menace have collected all of the eye-witness reports we co
 
 Our goal is to show an on-line report which allow user full or partial search on certain fields to spot the information!
 
-## Multiple Search Categories (Optional)
+## Multiple Search Categories
 
 * Using multiple `input` tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
 
