@@ -7,7 +7,7 @@ https://phuongtieuop.github.io/Javascript-challenge/
 
 The extra-terrestrial menace have collected all of the eye-witness reports we could to prove it! The collection is too large to search through manually.
 
-Our goal is to show an on-line report which allow user full or partial search on certain fields to spot the information!
+Our goal is to show an on-line report which allow user to enter full or partial value on certain fields to find the wanted information!
 
 ## Multiple Search Categories
 
